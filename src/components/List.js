@@ -1,19 +1,32 @@
-import React from 'react';
+import React from "react";
+import raw from "raw.macro";
 
 const List = () => {
-  const showFile = (e)=>{
-    e.preventDefault()
-    const reader = new FileReader()
-    reader.onload = async (e) => { 
-      const text = (e.target.result)
-      console.log(text)
-      alert(text)
-    };
-    reader.readAsText(e.target.files[0])
-  }
+  const content = raw(`../data/aliases3.txt`);
+  const listArr = content.split("¨¨");
   return (
-    <div><input type="file" onChange={(e) => showFile(e)} /></div>
-  )
-}
+    <>
+      <table>
+        <thead>
+          <tr>
+            <td>Alias</td>
+            <td>Command</td>
+          </tr>
+        </thead>
+        <tbody>
+          {listArr.map((e) => {
+            const lineArr = e.split("^^");
+            return (
+              <tr key={lineArr[0]}>
+                <td>{lineArr[0]}</td>
+                <td>{lineArr[1]}</td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+    </>
+  );
+};
 
-export default List
+export default List;
