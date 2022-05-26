@@ -8,7 +8,6 @@ npm start
 <!-- ![List of aliases](src/images/list.png "Aliases") -->
 
 TODO:
-- lag pin-funksjonalitet
 - lag søkefelt
 - sticky thead
 
