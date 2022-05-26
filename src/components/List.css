@@ -1,3 +1,7 @@
+:root {
+  --td-padding: 12px 15px;
+}
+
 table {
   border-collapse: collapse;
   margin: 25px 0;
@@ -15,7 +19,7 @@ table thead tr {
 
 table th,
 table td {
-    padding: 12px 15px;
+  padding: var(--td-padding);
 }
 
 table tbody tr {
@@ -33,6 +37,18 @@ table tbody tr:last-of-type {
 table tbody tr.active-row {
   font-weight: bold;
   color: #009879;
+}
+
+table tbody td.hasButton {
+  padding: 0;
+}
+
+table tbody td button {
+  padding: var(--td-padding);
+  min-height: 41px;
+  min-width: 82px;
+  /* background-color: transparent; */
+  border: none;
 }
 
 table tbody tr.pinned {

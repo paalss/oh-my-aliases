@@ -5,8 +5,7 @@ npm i
 npm start
 ```
 
-
-![List of aliases](src/images/list.png "Aliases")
+<!-- ![List of aliases](src/images/list.png "Aliases") -->
 
 TODO:
 - lag pin-funksjonalitet

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import raw from "raw.macro";
 // import Pinned from "./Pinned";
-import "./List.css"
+import "./List.css";
 
 const List = () => {
   const content = raw(`../data/aliases3.txt`);
@@ -49,8 +49,10 @@ const List = () => {
               <tr key={id} className={isPinned === "pinned" ? "pinned" : ""}>
                 <td>{alias}</td>
                 <td>{command}</td>
-                <td>
-                  <button onClick={() => togglePin(id)}>{isPinned}</button>
+                <td className="hasButton">
+                  <button onClick={() => togglePin(id)}>
+                    {isPinned}  
+                  </button>
                 </td>
               </tr>
             );
