@@ -9,9 +9,9 @@ const List = ({list, onTogglePin}) => {
       <table>
         <thead>
           <tr>
-            <td>Alias</td>
-            <td>Command</td>
-            <td>Pin</td>
+            <th>Alias</th>
+            <th>Command</th>
+            <th>Pin</th>
           </tr>
         </thead>
         <tbody>

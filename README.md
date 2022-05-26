@@ -1,18 +1,12 @@
 # Oh my bash / zsh aliases
 
-```
-npm i
-npm start
-```
-
-<!-- ![List of aliases](src/images/list.png "Aliases") -->
+![List of aliases](src/images/pinned-listitems.png "Aliases")
 
 TODO:
-- localStorage pinned items
 - collapse pinned items
 - lag søkefelt
 - sticky thead
-- dark mode
+- kun dark mode
 
 https://gist.github.com/paalss/d7b7e2223abb201e00c970367b0462e6
 
@@ -28,7 +22,6 @@ commit som viser hvordan man laster opp filer
 https://stackoverflow.com/questions/55830414/how-to-read-text-file-in-react
 
 -------------------
-
 
 # Getting Started with Create React App
 
