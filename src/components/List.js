@@ -1,39 +1,41 @@
 import React, { useState } from "react";
 import raw from "raw.macro";
-// import Pinned from "./Pinned";
-import thumbTack from "../images/thumbtack.png"
-import thumbTackW from "../images/thumbtack-w.png"
+import Pinned from "./Pinned";
+import thumbTack from "../images/thumbtack.png";
+import thumbTackW from "../images/thumbtack-w.png";
 import "./List.css";
 
 const List = () => {
   const content = raw(`../data/aliases3.txt`);
   const listArr = content.split("¨¨");
 
-  const listObj = listArr.map((e) => {
-    const lineArr = e.split("^^");
-    const [id, alias, command, isPinned] = lineArr;
+  const listOfObjs = listArr.map((e) => {
+    const itemArr = e.split("^^");
+    const [id, alias, command, isPinned] = itemArr;
     return { id, alias, command, isPinned };
   });
 
-  const [list, setList] = useState(listObj);
+  const [list, setList] = useState(listOfObjs);
+
+  // console.log(list);
 
   const togglePin = (id) => {
     setList((prevState) => {
-      const lineToToggle = prevState.find((e) => e.id === id);
-      console.log(prevState.indexOf(lineToToggle));
-      const toggledLine = {
-        ...lineToToggle,
-        isPinned: lineToToggle.isPinned === "unpinned" ? "pinned" : "unpinned",
+      const itemToToggle = prevState.find((e) => e.id === id);
+      const toggleditem = {
+        ...itemToToggle,
+        isPinned: itemToToggle.isPinned === "unpinned" ? "pinned" : "unpinned",
       };
-      return prevState.map((e) => (e.id === id ? toggledLine : e));
+      return prevState.map((e) => (e.id === id ? toggleditem : e));
     });
   };
 
+  const pinnedItems = list.filter((e) => e.isPinned === "pinned");
   return (
     <>
-      {/* {pinned && (
-      <Pinned lines={pinned}/>
-    )} */}
+      {pinnedItems.length > 0 && (
+        <Pinned items={pinnedItems}/>
+      )}
       <table>
         <thead>
           <tr>
@@ -53,7 +55,7 @@ const List = () => {
                   <button onClick={() => togglePin(id)}>
                     {isPinned === "pinned" ? (
                       <img width="20px" src={thumbTackW} alt="thumbtack" />
-                      ) : (
+                    ) : (
                       <img width="20px" src={thumbTack} alt="thumbtack" />
                     )}
                   </button>
