@@ -1,174 +1,174 @@
-alias -- -^^cd -¨¨
-alias ..^^cd ../¨¨
-alias ...^^cd ../../¨¨
-alias .3^^cd ../../../¨¨
-alias .4^^cd ../../../../¨¨
-alias .5^^cd ../../../../../¨¨
-alias .6^^cd ../../../../../../¨¨
-alias 1^^cd -¨¨
-alias 2^^cd -2¨¨
-alias 3^^cd -3¨¨
-alias 4^^cd -4¨¨
-alias 5^^cd -5¨¨
-alias 6^^cd -6¨¨
-alias 7^^cd -7¨¨
-alias 8^^cd -8¨¨
-alias 9^^cd -9¨¨
-alias _^^sudo¨¨
-alias afind^^ack -il¨¨
-alias alert^^notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"¨¨
-alias c^^clear¨¨
-alias cd..^^cd ../¨¨
-alias cic^^set completion-ignore-case On¨¨
-alias cp^^cp -iv¨¨
-alias d^^bm -d¨¨
-alias egrep^^egrep --color=auto¨¨
-alias fgrep^^fgrep --color=auto¨¨
-alias fix_stty^^stty sane¨¨
-alias fix_term^^echo -e "\033c"¨¨
-alias g^^bm -g¨¨
-alias ga^^git add¨¨
-alias gaa^^git add --all¨¨
-alias gapa^^git add --patch¨¨
-alias gau^^git add --update¨¨
-alias gb^^git branch¨¨
-alias gba^^git branch -a¨¨
-alias gbd^^git branch -d¨¨
-alias gbda^^git branch --no-color --merged | command grep -vE "^(\*|\s*(master|develop|dev)\s*$)" | command xargs -n 1 git branch -d¨¨
-alias gbl^^git blame -b -w¨¨
-alias gbnm^^git branch --no-merged¨¨
-alias gbr^^git branch --remote¨¨
-alias gbs^^git bisect¨¨
-alias gbsb^^git bisect bad¨¨
-alias gbsg^^git bisect good¨¨
-alias gbsr^^git bisect reset¨¨
-alias gbss^^git bisect start¨¨
-alias gc^^git commit -v¨¨
-alias gc!^^git commit -v --amend¨¨
-alias gca^^git commit -v -a¨¨
-alias gca!^^git commit -v -a --amend¨¨
-alias gcam^^git commit -a -m¨¨
-alias gcan!^^git commit -v -a --no-edit --amend¨¨
-alias gcans!^^git commit -v -a -s --no-edit --amend¨¨
-alias gcb^^git checkout -b¨¨
-alias gcd^^git checkout develop¨¨
-alias gcf^^git config --list¨¨
-alias gcl^^git clone --recursive¨¨
-alias gclean^^git clean -fd¨¨
-alias gcm^^git checkout master¨¨
-alias gcmsg^^git commit -m¨¨
-alias gcn!^^git commit -v --no-edit --amend¨¨
-alias gco^^git checkout¨¨
-alias gcount^^git shortlog -sn¨¨
-alias gcp^^git cherry-pick¨¨
-alias gcpa^^git cherry-pick --abort¨¨
-alias gcpc^^git cherry-pick --continue¨¨
-alias gcps^^git cherry-pick -s¨¨
-alias gcs^^git commit -S¨¨
-alias gcsm^^git commit -s -m¨¨
-alias gd^^git diff¨¨
-alias gdca^^git diff --cached¨¨
-alias gdct^^git describe --tags `git rev-list --tags --max-count=1`¨¨
-alias gdt^^git diff-tree --no-commit-id --name-only -r¨¨
-alias gdw^^git diff --word-diff¨¨
-alias gf^^git fetch¨¨
-alias gfa^^git fetch --all --prune¨¨
-alias gfo^^git fetch origin¨¨
-alias gg^^git gui citool¨¨
-alias gga^^git gui citool --amend¨¨
-alias ggpull^^git pull origin $(git_current_branch)¨¨
-alias ggpur^^ggu¨¨
-alias ggpush^^git push origin $(git_current_branch)¨¨
-alias ggsup^^git branch --set-upstream-to=origin/$(git_current_branch)¨¨
-alias ghh^^git help¨¨
-alias gignore^^git update-index --assume-unchanged¨¨
-alias gignored^^git ls-files -v | grep "^[[:lower:]]"¨¨
-alias git-svn-dcommit-push^^git svn dcommit && git push github master:svntrunk¨¨
-alias gk^^\gitk --all --branches¨¨
-alias gke^^\gitk --all $(git log -g --pretty=%h)¨¨
-alias gl^^git pull¨¨
-alias glg^^git log --stat¨¨
-alias glgg^^git log --graph¨¨
-alias glgga^^git log --graph --decorate --all¨¨
-alias glgm^^git log --graph --max-count=10¨¨
-alias glgp^^git log --stat -p¨¨
-alias glo^^git log --oneline --decorate¨¨
-alias glog^^git log --oneline --decorate --graph¨¨
-alias gloga^^git log --oneline --decorate --graph --all¨¨
-alias glol^^git log --graph --pretty='\''%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'\'' --abbrev-commit¨¨
-alias glola^^git log --graph --pretty='\''%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'\'' --abbrev-commit --all¨¨
-alias glp^^_git_log_prettily¨¨
-alias glum^^git pull upstream master¨¨
-alias gm^^git merge¨¨
-alias gmom^^git merge origin/master¨¨
-alias gmt^^git mergetool --no-prompt¨¨
-alias gmtvim^^git mergetool --no-prompt --tool=vimdiff¨¨
-alias gmum^^git merge upstream/master¨¨
-alias gp^^git push¨¨
-alias gpd^^git push --dry-run¨¨
-alias gpoat^^git push origin --all && git push origin --tags¨¨
-alias gpristine^^git reset --hard && git clean -dfx¨¨
-alias gpsup^^git push --set-upstream origin $(git_current_branch)¨¨
-alias gpu^^git push upstream¨¨
-alias gpv^^git push -v¨¨
-alias gr^^git remote¨¨
-alias gra^^git remote add¨¨
-alias grb^^git rebase¨¨
-alias grba^^git rebase --abort¨¨
-alias grbc^^git rebase --continue¨¨
-alias grbi^^git rebase -i¨¨
-alias grbm^^git rebase master¨¨
-alias grbs^^git rebase --skip¨¨
-alias grep^^grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn}¨¨
-alias grh^^git reset HEAD¨¨
-alias grhh^^git reset HEAD --hard¨¨
-alias grmv^^git remote rename¨¨
-alias grrm^^git remote remove¨¨
-alias grset^^git remote set-url¨¨
-alias grt^^cd $(git rev-parse --show-toplevel || echo ".")¨¨
-alias gru^^git reset --¨¨
-alias grup^^git remote update¨¨
-alias grv^^git remote -v¨¨
-alias gsb^^git status -sb¨¨
-alias gsd^^git svn dcommit¨¨
-alias gsi^^git submodule init¨¨
-alias gsps^^git show --pretty=short --show-signature¨¨
-alias gsr^^git svn rebase¨¨
-alias gss^^git status -s¨¨
-alias gst^^git status¨¨
-alias gsta^^git stash save¨¨
-alias gstaa^^git stash apply¨¨
-alias gstc^^git stash clear¨¨
-alias gstd^^git stash drop¨¨
-alias gstl^^git stash list¨¨
-alias gstp^^git stash pop¨¨
-alias gsts^^git stash show --text¨¨
-alias gsu^^git submodule update¨¨
-alias gts^^git tag -s¨¨
-alias gtv^^git tag | sort -V¨¨
-alias gunignore^^git update-index --no-assume-unchanged¨¨
-alias gunwip^^git log -n 1 | grep -q -c "\-\-wip\-\-" && git reset HEAD~1¨¨
-alias gup^^git pull --rebase¨¨
-alias gupa^^git pull --rebase --autostash¨¨
-alias gupav^^git pull --rebase --autostash -v¨¨
-alias gupv^^git pull --rebase -v¨¨
-alias gwch^^git whatchanged -p --abbrev-commit --pretty=medium¨¨
-alias gwip^^git add -A; git rm $(git ls-files --deleted) 2> /dev/null; git commit --no-verify -m "--wip-- [skip ci]"¨¨
-alias l^^ls -lah¨¨
-alias la^^ls -lAh¨¨
-alias less^^less -FSRXc¨¨
-alias ll^^ls -lAFh¨¨
-alias ls^^ls --color=auto¨¨
-alias lsa^^ls -lah¨¨
-alias md^^mkdir -p¨¨
-alias mkdir^^mkdir -pv¨¨
-alias mv^^mv -iv¨¨
-alias nano^^nano -W¨¨
-alias p^^bm -p¨¨
-alias path^^echo -e ${PATH//:/\\n}¨¨
-alias please^^sudo¨¨
-alias rd^^rmdir¨¨
-alias s^^bm -a¨¨
-alias show_options^^shopt¨¨
-alias src^^source ~/.bashrc¨¨
-alias wget^^wget -c¨¨
+1 ^^-- -^^cd -^^unpinned¨¨
+2 ^^..^^cd ../^^unpinned¨¨
+3 ^^...^^cd ../../^^unpinned¨¨
+4 ^^.3^^cd ../../../^^unpinned¨¨
+5 ^^.4^^cd ../../../../^^unpinned¨¨
+6 ^^.5^^cd ../../../../../^^unpinned¨¨
+7 ^^.6^^cd ../../../../../../^^unpinned¨¨
+8 ^^1^^cd -^^unpinned¨¨
+9 ^^2^^cd -2^^unpinned¨¨
+10 ^^3^^cd -3^^unpinned¨¨
+11 ^^4^^cd -4^^unpinned¨¨
+12 ^^5^^cd -5^^unpinned¨¨
+13 ^^6^^cd -6^^unpinned¨¨
+14 ^^7^^cd -7^^unpinned¨¨
+15 ^^8^^cd -8^^unpinned¨¨
+16 ^^9^^cd -9^^unpinned¨¨
+17 ^^_^^sudo^^unpinned¨¨
+18 ^^afind^^ack -il^^unpinned¨¨
+19 ^^alert^^notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"^^unpinned¨¨
+20 ^^c^^clear^^unpinned¨¨
+21 ^^cd..^^cd ../^^unpinned¨¨
+22 ^^cic^^set completion-ignore-case On^^unpinned¨¨
+23 ^^cp^^cp -iv^^unpinned¨¨
+24 ^^d^^bm -d^^unpinned¨¨
+25 ^^egrep^^egrep --color=auto^^unpinned¨¨
+26 ^^fgrep^^fgrep --color=auto^^unpinned¨¨
+27 ^^fix_stty^^stty sane^^unpinned¨¨
+28 ^^fix_term^^echo -e "\033c"^^unpinned¨¨
+29 ^^g^^bm -g^^unpinned¨¨
+30 ^^ga^^git add^^unpinned¨¨
+31 ^^gaa^^git add --all^^unpinned¨¨
+32 ^^gapa^^git add --patch^^unpinned¨¨
+33 ^^gau^^git add --update^^unpinned¨¨
+34 ^^gb^^git branch^^unpinned¨¨
+35 ^^gba^^git branch -a^^unpinned¨¨
+36 ^^gbd^^git branch -d^^unpinned¨¨
+37 ^^gbda^^git branch --no-color --merged | command grep -vE "^(\*|\s*(master|develop|dev)\s*$)" | command xargs -n 1 git branch -d^^unpinned¨¨
+38 ^^gbl^^git blame -b -w^^unpinned¨¨
+39 ^^gbnm^^git branch --no-merged^^unpinned¨¨
+40 ^^gbr^^git branch --remote^^unpinned¨¨
+41 ^^gbs^^git bisect^^unpinned¨¨
+42 ^^gbsb^^git bisect bad^^unpinned¨¨
+43 ^^gbsg^^git bisect good^^unpinned¨¨
+44 ^^gbsr^^git bisect reset^^unpinned¨¨
+45 ^^gbss^^git bisect start^^unpinned¨¨
+46 ^^gc^^git commit -v^^unpinned¨¨
+47 ^^gc!^^git commit -v --amend^^unpinned¨¨
+48 ^^gca^^git commit -v -a^^unpinned¨¨
+49 ^^gca!^^git commit -v -a --amend^^unpinned¨¨
+50 ^^gcam^^git commit -a -m^^unpinned¨¨
+51 ^^gcan!^^git commit -v -a --no-edit --amend^^unpinned¨¨
+52 ^^gcans!^^git commit -v -a -s --no-edit --amend^^unpinned¨¨
+53 ^^gcb^^git checkout -b^^unpinned¨¨
+54 ^^gcd^^git checkout develop^^unpinned¨¨
+55 ^^gcf^^git config --list^^unpinned¨¨
+56 ^^gcl^^git clone --recursive^^unpinned¨¨
+57 ^^gclean^^git clean -fd^^unpinned¨¨
+58 ^^gcm^^git checkout master^^unpinned¨¨
+59 ^^gcmsg^^git commit -m^^unpinned¨¨
+60 ^^gcn!^^git commit -v --no-edit --amend^^unpinned¨¨
+61 ^^gco^^git checkout^^unpinned¨¨
+62 ^^gcount^^git shortlog -sn^^unpinned¨¨
+63 ^^gcp^^git cherry-pick^^unpinned¨¨
+64 ^^gcpa^^git cherry-pick --abort^^unpinned¨¨
+65 ^^gcpc^^git cherry-pick --continue^^unpinned¨¨
+66 ^^gcps^^git cherry-pick -s^^unpinned¨¨
+67 ^^gcs^^git commit -S^^unpinned¨¨
+68 ^^gcsm^^git commit -s -m^^unpinned¨¨
+69 ^^gd^^git diff^^unpinned¨¨
+70 ^^gdca^^git diff --cached^^unpinned¨¨
+71 ^^gdct^^git describe --tags `git rev-list --tags --max-count=1`^^unpinned¨¨
+72 ^^gdt^^git diff-tree --no-commit-id --name-only -r^^unpinned¨¨
+73 ^^gdw^^git diff --word-diff^^unpinned¨¨
+74 ^^gf^^git fetch^^unpinned¨¨
+75 ^^gfa^^git fetch --all --prune^^unpinned¨¨
+76 ^^gfo^^git fetch origin^^unpinned¨¨
+77 ^^gg^^git gui citool^^unpinned¨¨
+78 ^^gga^^git gui citool --amend^^unpinned¨¨
+79 ^^ggpull^^git pull origin $(git_current_branch)^^unpinned¨¨
+80 ^^ggpur^^ggu^^unpinned¨¨
+81 ^^ggpush^^git push origin $(git_current_branch)^^unpinned¨¨
+82 ^^ggsup^^git branch --set-upstream-to=origin/$(git_current_branch)^^unpinned¨¨
+83 ^^ghh^^git help^^unpinned¨¨
+84 ^^gignore^^git update-index --assume-unchanged^^unpinned¨¨
+85 ^^gignored^^git ls-files -v | grep "^[[:lower:]]"^^unpinned¨¨
+86 ^^git-svn-dcommit-push^^git svn dcommit && git push github master:svntrunk^^unpinned¨¨
+87 ^^gk^^\gitk --all --branches^^unpinned¨¨
+88 ^^gke^^\gitk --all $(git log -g --pretty=%h)^^unpinned¨¨
+89 ^^gl^^git pull^^unpinned¨¨
+90 ^^glg^^git log --stat^^unpinned¨¨
+91 ^^glgg^^git log --graph^^unpinned¨¨
+92 ^^glgga^^git log --graph --decorate --all^^unpinned¨¨
+93 ^^glgm^^git log --graph --max-count=10^^unpinned¨¨
+94 ^^glgp^^git log --stat -p^^unpinned¨¨
+95 ^^glo^^git log --oneline --decorate^^unpinned¨¨
+96 ^^glog^^git log --oneline --decorate --graph^^unpinned¨¨
+97 ^^gloga^^git log --oneline --decorate --graph --all^^unpinned¨¨
+98 ^^glol^^git log --graph --pretty='\''%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'\'' --abbrev-commit^^unpinned¨¨
+99 ^^glola^^git log --graph --pretty='\''%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'\'' --abbrev-commit --all^^unpinned¨¨
+100 ^^glp^^_git_log_prettily^^unpinned¨¨
+101 ^^glum^^git pull upstream master^^unpinned¨¨
+102 ^^gm^^git merge^^unpinned¨¨
+103 ^^gmom^^git merge origin/master^^unpinned¨¨
+104 ^^gmt^^git mergetool --no-prompt^^unpinned¨¨
+105 ^^gmtvim^^git mergetool --no-prompt --tool=vimdiff^^unpinned¨¨
+106 ^^gmum^^git merge upstream/master^^unpinned¨¨
+107 ^^gp^^git push^^unpinned¨¨
+108 ^^gpd^^git push --dry-run^^unpinned¨¨
+109 ^^gpoat^^git push origin --all && git push origin --tags^^unpinned¨¨
+110 ^^gpristine^^git reset --hard && git clean -dfx^^unpinned¨¨
+111 ^^gpsup^^git push --set-upstream origin $(git_current_branch)^^unpinned¨¨
+112 ^^gpu^^git push upstream^^unpinned¨¨
+113 ^^gpv^^git push -v^^unpinned¨¨
+114 ^^gr^^git remote^^unpinned¨¨
+115 ^^gra^^git remote add^^unpinned¨¨
+116 ^^grb^^git rebase^^unpinned¨¨
+117 ^^grba^^git rebase --abort^^unpinned¨¨
+118 ^^grbc^^git rebase --continue^^unpinned¨¨
+119 ^^grbi^^git rebase -i^^unpinned¨¨
+120 ^^grbm^^git rebase master^^unpinned¨¨
+121 ^^grbs^^git rebase --skip^^unpinned¨¨
+122 ^^grep^^grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn}^^unpinned¨¨
+123 ^^grh^^git reset HEAD^^unpinned¨¨
+124 ^^grhh^^git reset HEAD --hard^^unpinned¨¨
+125 ^^grmv^^git remote rename^^unpinned¨¨
+126 ^^grrm^^git remote remove^^unpinned¨¨
+127 ^^grset^^git remote set-url^^unpinned¨¨
+128 ^^grt^^cd $(git rev-parse --show-toplevel || echo ".")^^unpinned¨¨
+129 ^^gru^^git reset --^^unpinned¨¨
+130 ^^grup^^git remote update^^unpinned¨¨
+131 ^^grv^^git remote -v^^unpinned¨¨
+132 ^^gsb^^git status -sb^^unpinned¨¨
+133 ^^gsd^^git svn dcommit^^unpinned¨¨
+134 ^^gsi^^git submodule init^^unpinned¨¨
+135 ^^gsps^^git show --pretty=short --show-signature^^unpinned¨¨
+136 ^^gsr^^git svn rebase^^unpinned¨¨
+137 ^^gss^^git status -s^^unpinned¨¨
+138 ^^gst^^git status^^unpinned¨¨
+139 ^^gsta^^git stash save^^unpinned¨¨
+140 ^^gstaa^^git stash apply^^unpinned¨¨
+141 ^^gstc^^git stash clear^^unpinned¨¨
+142 ^^gstd^^git stash drop^^unpinned¨¨
+143 ^^gstl^^git stash list^^unpinned¨¨
+144 ^^gstp^^git stash pop^^unpinned¨¨
+145 ^^gsts^^git stash show --text^^unpinned¨¨
+146 ^^gsu^^git submodule update^^unpinned¨¨
+147 ^^gts^^git tag -s^^unpinned¨¨
+148 ^^gtv^^git tag | sort -V^^unpinned¨¨
+149 ^^gunignore^^git update-index --no-assume-unchanged^^unpinned¨¨
+150 ^^gunwip^^git log -n 1 | grep -q -c "\-\-wip\-\-" && git reset HEAD~1^^unpinned¨¨
+151 ^^gup^^git pull --rebase^^unpinned¨¨
+152 ^^gupa^^git pull --rebase --autostash^^unpinned¨¨
+153 ^^gupav^^git pull --rebase --autostash -v^^unpinned¨¨
+154 ^^gupv^^git pull --rebase -v^^unpinned¨¨
+155 ^^gwch^^git whatchanged -p --abbrev-commit --pretty=medium^^unpinned¨¨
+156 ^^gwip^^git add -A; git rm $(git ls-files --deleted) 2> /dev/null; git commit --no-verify -m "--wip-- [skip ci]"^^unpinned¨¨
+157 ^^l^^ls -lah^^unpinned¨¨
+158 ^^la^^ls -lAh^^unpinned¨¨
+159 ^^less^^less -FSRXc^^unpinned¨¨
+160 ^^ll^^ls -lAFh^^unpinned¨¨
+161 ^^ls^^ls --color=auto^^unpinned¨¨
+162 ^^lsa^^ls -lah^^unpinned¨¨
+163 ^^md^^mkdir -p^^unpinned¨¨
+164 ^^mkdir^^mkdir -pv^^unpinned¨¨
+165 ^^mv^^mv -iv^^unpinned¨¨
+166 ^^nano^^nano -W^^unpinned¨¨
+167 ^^p^^bm -p^^unpinned¨¨
+168 ^^path^^echo -e ${PATH//:/\\n}^^unpinned¨¨
+169 ^^please^^sudo^^unpinned¨¨
+170 ^^rd^^rmdir^^unpinned¨¨
+171 ^^s^^bm -a^^unpinned¨¨
+172 ^^show_options^^shopt^^unpinned¨¨
+173 ^^src^^source ~/.bashrc^^unpinned¨¨
+174 ^^wget^^wget -c^^unpinned¨¨

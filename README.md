@@ -6,16 +6,19 @@ npm start
 ```
 
 
-![List of aliases](src/images/aliases.png "Aliases")
+![List of aliases](src/images/list.png "Aliases")
 
 TODO:
 - lag pin-funksjonalitet
 - lag søkefelt
+- sticky thead
 
 https://gist.github.com/paalss/d7b7e2223abb201e00c970367b0462e6
 
 
 https://dev.to/dcodeyt/creating-beautiful-html-tables-with-css-428l
+
+https://onlinetexttools.com/add-line-numbers
 
 Nyttig for YT-wrapped:
 commit som viser hvordan man laster opp filer
