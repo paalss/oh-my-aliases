@@ -11,20 +11,31 @@ function App() {
   const listOfObjs = listArr.map((e) => {
     const itemArr = e.split("^^");
     const [id, alias, command, isPinned] = itemArr;
-    return { id, alias, command, isPinned };
+    let isPinnedCheckLocalStorage = isPinned;
+    if (localStorage.getItem(id)) {
+      isPinnedCheckLocalStorage = "pinned";
+    }
+    console.log({ id, alias, command, isPinnedCheckLocalStorage });
+    return { id, alias, command, isPinned: isPinnedCheckLocalStorage };
   });
 
   const [items, setItems] = useState(listOfObjs);
 
   const togglePinHandler = (id) => {
-    setItems((prevState) => {
-      const itemToToggle = prevState.find((e) => e.id === id);
-      const toggleditem = {
-        ...itemToToggle,
-        isPinned: itemToToggle.isPinned === "unpinned" ? "pinned" : "unpinned",
-      };
-      return prevState.map((e) => (e.id === id ? toggleditem : e));
-    });
+    const itemToToggle = items.find((e) => e.id === id);
+    const newIsPinned =
+      itemToToggle.isPinned === "unpinned" ? "pinned" : "unpinned";
+    // save choice
+    if (newIsPinned === "pinned") {
+      localStorage.setItem(id, id);
+    } else {
+      localStorage.removeItem(id);
+    }
+    const newItem = {
+      ...itemToToggle,
+      isPinned: newIsPinned,
+    };
+    setItems((prevState) => prevState.map((e) => (e.id === id ? newItem : e)));
   };
 
   const pinnedItems = items.filter((e) => e.isPinned === "pinned");
