@@ -8,8 +8,11 @@ npm start
 <!-- ![List of aliases](src/images/list.png "Aliases") -->
 
 TODO:
+- localStorage pinned items
+- collapse pinned items
 - lag søkefelt
 - sticky thead
+- dark mode
 
 https://gist.github.com/paalss/d7b7e2223abb201e00c970367b0462e6
 
