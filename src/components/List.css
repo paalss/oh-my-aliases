@@ -4,10 +4,12 @@
 
 table {
   border-collapse: collapse;
-  margin: 25px 0;
+  /* margin: 25px 0; */
   font-size: 0.9em;
   font-family: sans-serif;
-  min-width: 400px;
+  /* min-width: 400px; */
+  width: 100%;
+  max-width: 900px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
 
@@ -39,19 +41,18 @@ table tbody tr.active-row {
   color: #009879;
 }
 
+table tbody td:first-child {
+  width: 100px;
+}
+
 table tbody td.hasButton {
   padding: 0;
+  width: 82px;
 }
 
 table tbody td button {
   padding: var(--td-padding);
-  min-height: 41px;
-  min-width: 82px;
+  width: 100%;
   background-color: transparent;
   border: none;
-}
-
-table tbody tr.pinned {
-  background-color: #009879;
-  color: #fff;
 }

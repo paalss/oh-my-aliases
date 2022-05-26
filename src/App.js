@@ -1,7 +1,7 @@
-import { useState } from 'react';
-import './App.css';
-import List from './components/List';
-import PinnedList from './components/List';
+import { useState } from "react";
+import "./App.css";
+import List from "./components/List";
+import PinnedList from "./components/List";
 import raw from "raw.macro";
 
 function App() {
@@ -33,10 +33,14 @@ function App() {
     <div className="App">
       <h1>Oh My Bash / Zsh Aliases</h1>
       <header className="App-header">
-      {pinnedItems.length > 0 && (
-        <PinnedList list={pinnedItems} onTogglePin={togglePinHandler}/>
-      )}
-        <List list={items} onTogglePin={togglePinHandler}/>
+        {pinnedItems.length > 0 && (
+          <>
+            <h2>Pinned items</h2>
+            <PinnedList list={pinnedItems} onTogglePin={togglePinHandler} />
+          </>
+        )}
+        {pinnedItems.length > 0 && <h2>All items</h2>}
+        <List list={items} onTogglePin={togglePinHandler} />
       </header>
     </div>
   );

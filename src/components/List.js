@@ -18,7 +18,7 @@ const List = ({list, onTogglePin}) => {
           {list.map((e) => {
             const { id, alias, command, isPinned } = e;
             return (
-              <tr key={id} className={isPinned === "pinned" ? "pinned" : ""}>
+              <tr key={id}>
                 <td>{alias}</td>
                 <td>{command}</td>
                 <td className="hasButton">
