@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import raw from "raw.macro";
 // import Pinned from "./Pinned";
+import thumbTack from "../images/thumbtack.png"
+import thumbTackW from "../images/thumbtack-w.png"
 import "./List.css";
 
 const List = () => {
@@ -14,18 +16,16 @@ const List = () => {
   });
 
   const [list, setList] = useState(listObj);
-  console.log(list);
 
   const togglePin = (id) => {
     setList((prevState) => {
       const lineToToggle = prevState.find((e) => e.id === id);
-      console.log(lineToToggle);
       console.log(prevState.indexOf(lineToToggle));
       const toggledLine = {
         ...lineToToggle,
         isPinned: lineToToggle.isPinned === "unpinned" ? "pinned" : "unpinned",
       };
-      return prevState.map((e) => (e.id !== id ? e : toggledLine));
+      return prevState.map((e) => (e.id === id ? toggledLine : e));
     });
   };
 
@@ -51,7 +51,11 @@ const List = () => {
                 <td>{command}</td>
                 <td className="hasButton">
                   <button onClick={() => togglePin(id)}>
-                    {isPinned}  
+                    {isPinned === "pinned" ? (
+                      <img width="20px" src={thumbTackW} alt="thumbtack" />
+                      ) : (
+                      <img width="20px" src={thumbTack} alt="thumbtack" />
+                    )}
                   </button>
                 </td>
               </tr>

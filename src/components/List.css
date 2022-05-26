@@ -47,10 +47,11 @@ table tbody td button {
   padding: var(--td-padding);
   min-height: 41px;
   min-width: 82px;
-  /* background-color: transparent; */
+  background-color: transparent;
   border: none;
 }
 
 table tbody tr.pinned {
   background-color: #009879;
+  color: #fff;
 }
