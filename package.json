@@ -1,6 +1,6 @@
 {
-  "homepage": "https://ohmyaliases.com",
-  "name": "oh-my-bash-zsh-aliases",
+  "homepage": "https://paalss.github.io/ohmyaliases",
+  "name": "oh-my-aliases",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
