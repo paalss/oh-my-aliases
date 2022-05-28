@@ -12,10 +12,6 @@ npm i
 npm start
 ```
 
-```
-npm deploy
-```
-
 https://gist.github.com/paalss/d7b7e2223abb201e00c970367b0462e6
 
 
