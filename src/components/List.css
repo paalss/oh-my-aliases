@@ -4,61 +4,59 @@
 
 table {
   border-collapse: collapse;
-  /* margin: 25px 0; */
   font-size: 0.9em;
   font-family: sans-serif;
-  /* min-width: 400px; */
   width: 100%;
   max-width: 900px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
 
-table thead tr {
-  /* background-color: #009879; */
+th {
   color: #ffffff;
-  text-align: left;
-}
-
-table thead tr th {
   position: sticky;
   top: 0;
   background-color: #009879;
-}
-
-table th,
-table td {
   padding: var(--td-padding);
 }
 
-table tbody tr {
+tr {
   border-bottom: 1px solid #dddddd;
 }
 
-table tbody tr:nth-of-type(even) {
+tr:hover td {
+  font-weight: bolder;
+  background-color: rgb(213, 213, 213);
+}
+
+tr:nth-of-type(even) {
   background-color: #f3f3f3;
 }
 
-table tbody tr:last-of-type {
+tr:last-of-type {
   border-bottom: 2px solid #009879;
 }
 
-table tbody tr.active-row {
-  font-weight: bold;
-  color: #009879;
+td {
+  padding: 0;
 }
 
-table tbody td:first-child {
+td:first-child {
   width: 100px;
 }
 
-table tbody td.hasButton {
-  padding: 0;
+td:last-child {
   width: 82px;
 }
 
-table tbody td button {
+/* button text is centered by default. Disable default for everything except thumbtacks */
+:not(td:last-child) {
+  text-align: start;
+}
+
+button {
   padding: var(--td-padding);
   width: 100%;
+  height: 55px;
   background-color: transparent;
   border: none;
 }

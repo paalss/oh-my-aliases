@@ -3,7 +3,7 @@ import thumbTack from "../images/thumbtack.png";
 import thumbTackW from "../images/thumbtack-g.png";
 import "./List.css";
 
-const List = ({list, onTogglePin}) => {
+const List = ({ list, onTogglePin }) => {
   return (
     <>
       <table>
@@ -19,9 +19,13 @@ const List = ({list, onTogglePin}) => {
             const { id, alias, command, isPinned } = e;
             return (
               <tr key={id}>
-                <td>{alias}</td>
-                <td>{command}</td>
-                <td className="hasButton">
+                <td>
+                  <button onClick={()=> onTogglePin(id)}>{alias}</button>
+                </td>
+                <td>
+                  <button onClick={()=> onTogglePin(id)}>{command}</button>
+                </td>
+                <td>
                   <button onClick={() => onTogglePin(id)}>
                     {isPinned === "pinned" ? (
                       <img width="20px" src={thumbTackW} alt="thumbtack" />
