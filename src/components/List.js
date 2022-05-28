@@ -1,6 +1,6 @@
 import React from "react";
 import thumbTack from "../images/thumbtack.png";
-import thumbTackW from "../images/thumbtack-w.png";
+import thumbTackW from "../images/thumbtack-g.png";
 import "./List.css";
 
 const List = ({list, onTogglePin}) => {

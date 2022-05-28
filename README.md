@@ -3,10 +3,9 @@
 ![List of aliases](src/images/pinned-listitems.png "Aliases")
 
 TODO:
-- collapse pinned items
+<!-- - collapse pinned items -->
 - lag søkefelt
-- sticky thead
-- kun dark mode
+<!-- - kun dark mode -->
 
 https://gist.github.com/paalss/d7b7e2223abb201e00c970367b0462e6
 
