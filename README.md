@@ -1,12 +1,17 @@
 # Oh my bash / zsh aliases
+https://paalss.github.io/oh-my-aliases/
+
+A list of each oh my bash/zsh alias
 
 ![List of aliases](src/images/pinned-listitems.png "Aliases")
 
+## Dev notes
 TODO:
 - lag søkefelt
 <!-- - collapse pinned items -->
 <!-- - kun dark mode -->
 
+Bruk Git bash, ikke WSL (for react-snap's skyld)
 ```
 npm i
 npm start

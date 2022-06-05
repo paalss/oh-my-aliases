@@ -15,7 +15,7 @@ function App() {
     if (localStorage.getItem(id)) {
       isPinnedCheckLocalStorage = "pinned";
     }
-    console.log({ id, alias, command, isPinnedCheckLocalStorage });
+    // console.log({ id, alias, command, isPinnedCheckLocalStorage });
     return { id, alias, command, isPinned: isPinnedCheckLocalStorage };
   });
 
