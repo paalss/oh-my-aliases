@@ -1,36 +1,52 @@
 # Oh my bash / zsh aliases
+
 https://paalss.github.io/oh-my-aliases/
 
 ![List of aliases](src/images/pinned-listitems.png "Aliases")
 
 ## Dev notes
+
 TODO:
+
 - lag søkefelt
-<!-- - collapse pinned items -->
-<!-- - kun dark mode -->
+  <!-- - collapse pinned items -->
+  <!-- - kun dark mode -->
 
 Bruk Git bash, ikke WSL (for react-snap's skyld)
-```
+
+```bash
 npm i
 npm start
+```
+
+### Deploy
+For tiden har du byttet til SSH: (`git remote set-url origin git@github.com:paalss/oh-my-aliases.git`), og da funker det bare å deploye med WSL. Til så lenge, har ikke lagret noe ssh-key som git bash har tilgang på.
+
+Derfor må vi kjøre build og deploy hver for seg (ingen predeploy)
+
+Git bash: (nødvendig for react-snap)
+```bash
+npm run build
+```
+
+WSL: (nødvendig for SSH repo)
+```
 npm run deploy
 ```
 
-https://gist.github.com/paalss/d7b7e2223abb201e00c970367b0462e6
+Evt. så får du bare bytte tilbake til HTTPS repo slik at alt kan kjøres i Git bash
 
+https://gist.github.com/paalss/d7b7e2223abb201e00c970367b0462e6
 
 https://dev.to/dcodeyt/creating-beautiful-html-tables-with-css-428l
 
 https://onlinetexttools.com/add-line-numbers
 
-Nyttig for YT-wrapped:
-commit som viser hvordan man laster opp filer
-0bb7dbf3c51d5e6708c552b090d858b296bd7a2e
-
 https://stackoverflow.com/questions/55830414/how-to-read-text-file-in-react
 
--------------------
--------------------
+---
+
+---
 
 # Getting Started with Create React App
 
