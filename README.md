@@ -17,21 +17,7 @@ Bruk Git bash, ikke WSL (for react-snap's skyld)
 ```bash
 npm i
 npm start
-```
-
-### Deploy
-For tiden har du byttet til SSH: (`git remote set-url origin git@github.com:paalss/oh-my-aliases.git`), og da funker det bare å deploye med WSL. Til så lenge, har ikke lagret noe ssh-key som git bash har tilgang på.
-
-Derfor må vi kjøre build og deploy hver for seg (ingen predeploy)
-
-Git bash: (nødvendig for react-snap)
-```bash
-npm run build
-```
-
-WSL: (nødvendig for SSH repo)
-```
-npm run deploy
+npm run deploy # må kjøres i Git bash og ikke WSL (pga react-snap i production build prosessen)
 ```
 
 Evt. så får du bare bytte tilbake til HTTPS repo slik at alt kan kjøres i Git bash
