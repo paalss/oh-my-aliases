@@ -1,6 +1,4 @@
-@media screen and (min-width: 500px) {
-  .App {
-    margin: 0 auto;
-    width: 90%;
-  }
+.App {
+  max-width: 900px;
+  margin: 0 auto;
 }

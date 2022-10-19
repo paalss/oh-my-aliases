@@ -43,7 +43,7 @@ function App() {
   return (
     <div className="App">
       <h1>Oh My Bash / Zsh Aliases</h1>
-      <header className="App-header">
+      <main>
         {pinnedItems.length > 0 && (
           <>
             <h2>Pinned items</h2>
@@ -52,7 +52,7 @@ function App() {
         )}
         {pinnedItems.length > 0 && <h2>All items</h2>}
         <List list={items} onTogglePin={togglePinHandler} />
-      </header>
+      </main>
     </div>
   );
 }
